@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+    
+
+</head>
+<body>
+    <h1>Show Product Deatils..</h1>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>PRODUCT ID</th>
+                <th>PRODUCT NAME</th>
+                <th>PRODUCT DESCRIPTION</th>
+                <th>PRODUCT QUANTITY</th>
+                <th>PRODUCT PRICE</th>
+                <th>ACTION..</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in product %}
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.product_name }}</td>
+                <td>{{ p.description }}</td>
+                <td>{{ p.quantity }}</td>
+                <td>{{ p.Price }}</td>
+
+                <td><a href="{% url 'editpage' p.id  %}">Edit</a>
+                    <br>
+                    <a href="{% url 'deletepage' p.id  %}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}                    
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,4 @@
+envname--------- np2
+foldername------ CRUDpRoject
+appname--------- AppCRUD
+projectname----- CRUDproject
